@@ -1,0 +1,21 @@
+﻿@model BugTracker.Models.Ticket
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h4>Subject:</h4>
+<p>@Model.Subject</p>
+
+<h4>Description:</h4>
+<p>@Model.Description</p>
+
+<p>Ticket Status: @Model.Status.Name</p>
+
+<ul>
+    <li> Time Opened: @Model.TimeOpened</li>
+    <li> Time Assigned: @Model.TimeAssigned</li>
+    <li> Time Resolved: @Model.TimeResolved</li>
+
+</ul>

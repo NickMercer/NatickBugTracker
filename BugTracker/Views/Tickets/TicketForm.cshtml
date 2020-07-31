@@ -1,0 +1,54 @@
+﻿@model BugTracker.View_Models.TicketFormViewModel
+@{
+    ViewBag.Title = @Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+
+@using (Html.BeginForm("Save", "Tickets"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <div class="form-group">
+        @Html.LabelFor(t => t.Subject)
+        @Html.TextBoxFor(t => t.Subject, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.Subject)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.Description)
+        @Html.TextAreaFor(t => t.Description, 10, 40, new { @class = "form-control", style = "width: 80%; max-width: 80%;" })
+        @Html.ValidationMessageFor(t => t.Description)
+    </div>
+    if (!Model.IsNewTicket)
+    {
+        <div class="form-group">
+            @Html.LabelFor(t => t.TimeAssigned)
+            @Html.TextBoxFor(m => m.TimeAssigned, "{0:s}", new { @class = "form-control", @type = "datetime-local" })
+            @Html.ValidationMessageFor(t => t.TimeAssigned)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(t => t.TimeResolved)
+            @Html.TextBoxFor(m => m.TimeResolved, "{0:s}", new { @class = "form-control", @type = "datetime-local" })
+            @Html.ValidationMessageFor(t => t.TimeResolved)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(t => t.StatusId)
+            @Html.DropDownListFor(t => t.StatusId, new SelectList(Model.Statuses, "Id", "Name"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.StatusId)
+        </div>
+    }
+    else
+    {
+        @Html.HiddenFor(t => t.StatusId)
+    }
+    @Html.HiddenFor(t => t.Id)
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@section Scripts
+{    
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

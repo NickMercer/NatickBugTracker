@@ -1,0 +1,37 @@
+﻿@model System.Collections.Generic.List<BugTracker.Models.Ticket>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tickets</h2>
+
+@Html.ActionLink("New Ticket", "Create", "Tickets", new { @class = "btn btn-primary" })
+
+@if (Model.Count == 0)
+{
+    <p>No Tickets were found! Please create some bugs.</p>
+}
+else
+{
+
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Subject</th>
+            <th>Time Opened</th>
+            <th>Ticket Status</th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td> @Html.ActionLink(ticket.Subject, "Details", "Tickets", new { Id = ticket.Id }, null)</td>
+                <td> @ticket.TimeOpened</td>
+                <td> @ticket.Status.Name</td>
+                <td> @Html.ActionLink("Edit", "Edit", "Tickets", new { Id = ticket.Id }, null)</td>
+            </tr>
+        }
+    </table>
+}
+

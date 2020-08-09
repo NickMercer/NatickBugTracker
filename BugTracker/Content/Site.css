@@ -34,3 +34,7 @@ textarea {
 .validation-summary-errors {
     color: red;
 }
+
+.btn-spaced {
+    margin-bottom: 15px;
+}

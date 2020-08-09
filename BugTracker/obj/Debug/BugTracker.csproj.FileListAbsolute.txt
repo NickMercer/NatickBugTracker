@@ -111,3 +111,11 @@ C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugT
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.PopulateTicketStatuses.resources
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.AddedStatusIdToTickets.resources
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.TicketTimesToNullable.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Net.Http.Formatting.dll
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web.Http.dll
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web.Http.WebHost.dll
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Net.Http.Formatting.xml
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web.Http.xml
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web.Http.WebHost.xml
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\AutoMapper.dll
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\AutoMapper.xml

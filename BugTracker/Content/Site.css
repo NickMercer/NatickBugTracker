@@ -38,3 +38,7 @@ textarea {
 .btn-spaced {
     margin-bottom: 15px;
 }
+
+.sized-button {
+    width: 150px;
+}

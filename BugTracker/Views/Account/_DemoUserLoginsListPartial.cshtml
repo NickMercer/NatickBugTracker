@@ -1,0 +1,47 @@
+﻿<h4>Login with a Demo User Account.</h4>
+<hr />
+@{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <form action="/Account/Login" method="POST">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="username" value="TestAdmin">
+                    <input type="hidden" name="password" value="Guest1!">
+                    <input type="hidden" name="rememberMe" value="false">
+                    <input type="submit" value="Admin/Manager" class="btn btn-primary sized-button">
+                </form>
+            </div>
+            <div class="col-sm-2">
+                <form action="/Account/Login" method="POST">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="username" value="TestDeveloper">
+                    <input type="hidden" name="password" value="Guest1!">
+                    <input type="hidden" name="rememberMe" value="false">
+                    <input type="submit" value="Developer" class="btn btn-warning sized-button">
+                </form>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2">
+                <form action="/Account/Login" method="POST">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="username" value="TestProjectLead">
+                    <input type="hidden" name="password" value="Guest1!">
+                    <input type="hidden" name="rememberMe" value="false">
+                    <input type="submit" value="Project Lead" class="btn btn-danger sized-button">
+                </form>
+            </div>
+            <div class="col-sm-1">
+                <form action="/Account/Login" method="POST">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="username" value="TestGuest">
+                    <input type="hidden" name="password" value="Guest1!">
+                    <input type="hidden" name="rememberMe" value="false">
+                    <input type="submit" value="Guest" class="btn sized-button">
+                </form>
+            </div>
+        </div>
+    </div>
+}

@@ -9,6 +9,7 @@ using BugTracker.View_Models;
 
 namespace BugTracker.Controllers
 {
+    [Authorize]
     public class TicketsController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -54,6 +55,7 @@ namespace BugTracker.Controllers
         }
 
         // GET: Tickets/Edit/Id
+        [Authorize(Roles = Roles.Admin + "," + Roles.Developer + "," + Roles.ProjectLead)]
         public ActionResult Edit(int id)
         {
             var ticket = context.Tickets.SingleOrDefault(t => t.Id == id);

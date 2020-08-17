@@ -11,6 +11,7 @@ using System.Data.Entity;
 
 namespace BugTracker.Controllers.api
 {
+    [Authorize]
     public class TicketsController : ApiController
     {
         private readonly ApplicationDbContext context;
@@ -57,6 +58,7 @@ namespace BugTracker.Controllers.api
         }
 
         [HttpPost]
+        [Authorize(Roles = Roles.Admin + "," + Roles.ProjectLead + "," + Roles.Developer)]
         public void UpdateTicket(int id, TicketDto ticketDto)
         {
             if(!ModelState.IsValid)
@@ -77,6 +79,7 @@ namespace BugTracker.Controllers.api
         }
 
         [HttpDelete]
+        [Authorize(Roles = Roles.Admin + "," + Roles.ProjectLead + "," + Roles.Developer)]
         public void DeleteCustomer(int id)
         {
             var ticketInDb = context.Tickets.SingleOrDefault(t => t.Id == id);

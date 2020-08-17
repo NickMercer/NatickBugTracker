@@ -119,3 +119,6 @@ C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\System.Web.Http.WebHost.xml
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\AutoMapper.dll
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\AutoMapper.xml
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.AddUsernameToAccount.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.ChangedUsernameToIdentityUserName.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.SeedUsersAndRoles.resources

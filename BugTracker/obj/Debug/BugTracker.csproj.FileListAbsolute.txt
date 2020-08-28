@@ -122,3 +122,6 @@ C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\bin\AutoMapper
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.AddUsernameToAccount.resources
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.ChangedUsernameToIdentityUserName.resources
 C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.SeedUsersAndRoles.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.AddedProjectModel.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.AddedDeveloperProjects.resources
+C:\Users\dekor\source\repos\BugTrackerFinal\BugTracker\BugTracker\obj\Debug\BugTracker.Migrations.PopulateProjectStatuses.resources

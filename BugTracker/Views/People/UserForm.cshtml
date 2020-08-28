@@ -1,0 +1,55 @@
+﻿@model BugTracker.View_Models.UserFormViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Save", "People"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    if (User.IsInRole(BugTracker.Models.Roles.Admin) || User.Identity.Name == Model.UserName)
+    {
+        <div class="form-group">
+            @Html.LabelFor(x => x.UserName)
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.UserName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Email)
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+    }
+    else
+    {
+        Html.HiddenFor(x => x.UserName);
+        Html.HiddenFor(x => x.Email);
+    }
+
+    if (User.IsInRole(BugTracker.Models.Roles.Admin))
+    {
+        <div class="form-group">
+            @Html.LabelFor(x => x.Role)
+            @Html.DropDownListFor(x => x.Role, new SelectList(Model.Roles, Model.Role), new { @class = "form-control" })
+        </div>
+    }
+    else
+    {
+        Html.HiddenFor(x => x.Role);
+    }
+    @Html.HiddenFor(x => x.Id)
+
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

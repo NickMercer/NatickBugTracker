@@ -22,6 +22,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Tickets", "Index", "Tickets")</li>
+                    @if (User.IsInRole(BugTracker.Models.Roles.Admin) || User.IsInRole(BugTracker.Models.Roles.ProjectLead))
+                    {
+                        <li>@Html.ActionLink("People", "Index", "People")</li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

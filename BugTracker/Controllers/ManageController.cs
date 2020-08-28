@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BugTracker.Models;
+using BugTracker.View_Models;
 
 namespace BugTracker.Controllers
 {
@@ -211,6 +212,18 @@ namespace BugTracker.Controllers
                 await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
             }
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
+        }
+
+        public ActionResult ChangeProfile()
+        {
+            return RedirectToAction("Edit", "People", new { id = User.Identity.GetUserId() });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeProfile(UserFormViewModel model)
+        {
+            return RedirectToAction("Save", "People", new { Model = model });
         }
 
         //

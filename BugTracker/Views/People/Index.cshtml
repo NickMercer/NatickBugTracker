@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>People</h2>
+
+<table id="people" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#people").DataTable({
+                ajax:
+                {
+                    url: "/api/people",
+                    dataSrc: ""
+                },
+                columns:
+                    [
+                        {
+                            data: "userName",
+                            render: function (data, type, person) {
+                                return "<a href='/people/edit/" + person.id + "'>" + person.userName + "</a>";
+                            }
+                        },
+                        {
+                            data: "role"
+                        }
+                    ]
+            });
+        });
+    </script>    
+}

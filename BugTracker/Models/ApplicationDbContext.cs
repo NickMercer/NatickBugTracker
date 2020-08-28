@@ -9,6 +9,11 @@ namespace BugTracker.Models
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<TicketStatus> TicketStatuses { get; set; }
 
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectStatus> ProjectStatuses { get; set; }
+        public DbSet<DeveloperProjects> DeveloperProjects { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -18,5 +23,6 @@ namespace BugTracker.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }
